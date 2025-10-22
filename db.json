@@ -1,0 +1,92 @@
+{
+  "businesses": [
+    {
+      "id": "1",
+      "name": "Wairimu Fresh Veggies",
+      "category": "Groceries",
+      "location": "Lower Kabete",
+      "contact": "+254712345678",
+      "description": "Your go-to spot for farm-fresh veggies picked daily from local farms!"
+    },
+    {
+      "id": "2",
+      "name": "Aberdare Butchery",
+      "category": "Butchery",
+      "location": "Lower Kabete",
+      "contact": "+254701234567",
+      "description": "Supplying the juiciest cuts of meat with a smile and a great price."
+    },
+    {
+      "id": "3",
+      "name": "Pawa Electronics",
+      "category": "Electronics",
+      "location": "Lower Kabete",
+      "contact": "+254798765432",
+      "description": "Your neighborhood plug for phones, chargers, and smart gadgets that work!"
+    },
+    {
+      "id": "4",
+      "name": "Urembo Hair Studio",
+      "category": "Beauty & Hair",
+      "location": "Kitisuru",
+      "contact": "+254790123456",
+      "description": "Where beauty meets style — get pampered, styled, and confident!"
+    },
+    {
+      "id": "5",
+      "name": "Mwendaz Garage",
+      "category": "Auto Services",
+      "location": "Kirawa Rd",
+      "contact": "+254734567890",
+      "description": "Fast, honest car repairs and maintenance to keep you on the road."
+    },
+    {
+      "id": "6",
+      "name": "Kwetu Chemist",
+      "category": "Health",
+      "location": "Kabete",
+      "contact": "+254745678901",
+      "description": "Your friendly neighborhood chemist — trusted health advice and care."
+    },
+    {
+      "id": "7",
+      "name": "Mkulima Bakery",
+      "category": "Bakery",
+      "location": "Lower Kabete",
+      "contact": "+254737679401",
+      "description": "The smell of happiness — freshly baked bread, pastries, and cakes!"
+    },
+    {
+      "id": "8",
+      "name": "Her Shop",
+      "category": "Fashion",
+      "location": "Spring Valley",
+      "contact": "+254758392010",
+      "description": "Confidence starts underneath — trendy, comfy, and elegant lingerie."
+    },
+    {
+      "id": "9",
+      "name": "Cams Agrovet",
+      "category": "Agriculture",
+      "location": "Lower Kabete",
+      "contact": "+254701112233",
+      "description": "Helping farmers grow — seeds, feeds, and expert farming advice."
+    },
+    {
+      "id": "10",
+      "name": "Nduta Tailoring Services",
+      "category": "Tailoring",
+      "location": "Kabete",
+      "contact": "+254723567891",
+      "description": "Custom-made outfits stitched with love, precision, and style."
+    },
+    {
+      "id": "11",
+      "name": "Classic Cleaners",
+      "category": "Laundry",
+      "location": "Kitisuru",
+      "contact": "+254714452091",
+      "description": "Turning laundry day into a breeze — fresh, clean, and perfectly pressed!"
+    }
+  ]
+}

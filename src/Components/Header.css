@@ -1,0 +1,50 @@
+.jirani-header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #007bff, #00a6ff);
+  color: #fff;
+  padding: 15px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-center {
+  flex: 1;
+  text-align: center;
+}
+
+.jirani-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.icon-link {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-left: 15px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.icon-link:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .jirani-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .header-right {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .icon-link {
+    margin: 0 10px;
+  }
+}
