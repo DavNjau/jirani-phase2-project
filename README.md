@@ -21,32 +21,6 @@ It features a registration form, a dynamic business dashboard, and clean UI styl
 
 ---
 
-## Installation & Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone <your_repo_url>
-   cd jirani
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Run JSON Server:**
-   ```bash
-   npx json-server --watch db.json --port 3001
-   ```
-
-4. **Start the React app:**
-   ```bash
-   npm start
-   ```
-
-Then visit [http://localhost:3000](http://localhost:3000) 
-
----
 
 ## Project Structure
 ```
