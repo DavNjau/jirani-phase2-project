@@ -2,10 +2,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from './Components/Header';
 import RegistrationForm from './Components/RegistrationForm';
+import Filter from './Components/Filter';
 import Dashboard from './Components/Dashboard';
 import Footer from './Components/Footer';
+import React, { useState, useEffect } from 'react';
 
 function App() {
+  const [allBusinesses, setAllBusinesses] = useState([]);
+  const [filteredBusinesses, setFilteredBusinesses] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/businesses")
+      .then((res) => res.json())
+      .then((data) => {
+        setAllBusinesses(data);
+        setFilteredBusinesses(data);
+      })
+  }, []);
+
   return (
     <div className="App">
       <Header />
@@ -30,8 +44,21 @@ function App() {
           </div>
         </div>
 
+        <div>
+          <Filter
+            allBusinesses={allBusinesses}
+            setFilteredBusinesses={setFilteredBusinesses}
+          />
+        </div>
+
         <div className="mt-5">
-          <Dashboard />
+          <Dashboard
+            businesses={filteredBusinesses}
+            allBusinesses={allBusinesses}
+            filteredBusinesses={filteredBusinesses}
+            setAllBusinesses={setAllBusinesses}
+            setFilteredBusinesses={setFilteredBusinesses}
+          />
         </div>
       </div>
 

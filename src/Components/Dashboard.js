@@ -1,50 +1,46 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-function Dashboard() {
-  const [businesses, setBusinesses] = useState([]);
+function Dashboard({ businesses, allBusinesses, filteredBusinesses, setAllBusinesses, setFilteredBusinesses }) {
+    const handleDelete = (id) => {
+        fetch(`http://localhost:3001/businesses/${id}`,
+            { method: "DELETE" })
+            .then(() => {
+                const updatedAll = allBusinesses.filter(
+                    business => business.id !== id
+                );
+                const updatedFiltered = filteredBusinesses.filter(
+                    business => business.id !== id
+                );
+                setAllBusinesses(updatedAll);
+                setFilteredBusinesses(updatedFiltered);
+            })
+    };
 
-  const cardStyle = {
-    borderRadius: "12px",
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-    transition: "transform 0.2s ease-in-out",
-    padding: "16px",
-    backgroundColor: "#ffffff",
-  };
-
-  const cardHover = {
-    transform: "scale(1.03)",
-  };
-
-  useEffect(() => {
-    fetch("http://localhost:3001/businesses")
-      .then((res) => res.json())
-      .then((data) => setBusinesses(data))
-      .catch((err) => console.error("Error loading businesses:", err));
-  }, []);
-
-  return (
-    <div className="container my-4">
-      <h3 className="text-center mb-4 fw-bold">Available Businesses</h3>
-      <div className="row g-4">
-        {businesses.map((biz) => (
-          <div className="col-md-4" key={biz.id}>
-            <div
-              className="card h-100"
-              style={cardStyle}
-            >
-              <div className="card-body">
-                <h5 className="card-title fw-semibold">{biz.name}</h5>
-                <p className="text-muted mb-1">Category: {biz.category}</p>
-                <p className="mb-1">Location: {biz.location}</p>
-                <p className="mb-1">Contact: {biz.contact}</p>
-                <p className="mt-2">{biz.description}</p>
-              </div>
+    return (
+        <div className="container my-4">
+            <h3 className="text-center mb-4 fw-bold">Available Businesses</h3>
+            <div className="row g-4">
+                {businesses.map((business) => (
+                    <div className="col-md-4" key={business.id}>
+                        <div className="card h-100">
+                            <div className="card-body">
+                                <h5 className="card-title fw-semibold">{business.name}</h5>
+                                <p className="text-muted mb-1">Category: {business.category}</p>
+                                <p className="mb-1">Location: {business.location}</p>
+                                <p className="mb-1">Contact: {business.contact}</p>
+                                <p className="mt-2">{business.description}</p>
+                                <button
+                                    className="btn btn-danger btn-sm"
+                                    onClick={() => handleDelete(business.id)}>
+                                    X
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+        </div>
+    );
 }
 
 export default Dashboard;

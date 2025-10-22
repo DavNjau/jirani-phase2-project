@@ -54,6 +54,14 @@ textarea.form-control {
   resize: none;
 }
 
+.card {
+    border-radius: "12px";
+    box-shadow: "0 4px 8px rgba(0, 0, 0, 0.1)";
+    transition: "transform 0.2s ease-in-out";
+    padding: "16px";
+    background-color: "#ffffff";
+}
+
 .btn {
   display: block;
   width: 100%;
@@ -83,4 +91,3 @@ textarea.form-control {
     font-size: 1.4rem;
   }
 }
-

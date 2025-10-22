@@ -28,9 +28,8 @@ function RegistrationForm() {
       body: JSON.stringify(formData),
     })
       .then((res) => res.json())
-      .then((newBusiness) => {
-        alert(`Business "${newBusiness.name}" registered successfully!`);
-        console.log("Added:", newBusiness);
+      .then((data) => {
+        alert(`Business "${data.name}" registered successfully!`);
         setFormData({
           name: "",
           category: "",
@@ -39,7 +38,6 @@ function RegistrationForm() {
           description: "",
         });
       })
-      .catch((error) => console.error("Error:", error));
   };
 
   return (
