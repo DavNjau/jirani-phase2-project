@@ -21,20 +21,24 @@ It features a registration form, a dynamic business dashboard, and clean UI styl
 
 ---
 
-
-## Project Structure
-```
 src/
 ├── Components/
 │   ├── Header.jsx
+│   ├── Footer.jsx
 │   ├── RegistrationForm.jsx
 │   ├── Dashboard.jsx
-│   └── Footer.jsx
+│   ├── Filter.jsx
+│   ├── Home.jsx
+│   └── About.jsx
+├── Routes.js
 ├── App.js
 ├── App.css
-└── index.js
+├── Header.css
+├── index.js
+└── images/
+    └── background-img.png
+---
 db.json
-```
 
 ---
 
