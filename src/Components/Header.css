@@ -32,6 +32,19 @@
   transform: scale(1.1);
 }
 
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  color: #fff !important;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #dfe6f1 !important;
+}
+
 @media (max-width: 768px) {
   .jirani-header {
     flex-direction: column;
@@ -48,3 +61,4 @@
     margin: 0 10px;
   }
 }
+

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 
 function RegistrationForm() {
@@ -16,6 +17,8 @@ function RegistrationForm() {
       [name]: value,
     });
   };
+
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -37,6 +40,7 @@ function RegistrationForm() {
           contact: "",
           description: "",
         });
+        navigate("/dashboard");
       })
   };
 
@@ -112,7 +116,7 @@ function RegistrationForm() {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary w-100">
+        <button type="submit" className="btn btn-primary">
           Register Business
         </button>
       </form>

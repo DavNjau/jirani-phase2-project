@@ -79,6 +79,14 @@
       "location": "Kitisuru",
       "contact": "+254714452091",
       "description": "Turning laundry day into a breeze — fresh, clean, and perfectly pressed!"
+    },
+    {
+      "id": "fcb2",
+      "name": "Kianjogu Dairy",
+      "category": "Dairy products",
+      "location": "Spring Valley",
+      "contact": "070202020202",
+      "description": "Everything dairy"
     }
   ]
 }

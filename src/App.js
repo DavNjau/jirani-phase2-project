@@ -1,11 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from './Components/Header';
-import RegistrationForm from './Components/RegistrationForm';
-import Filter from './Components/Filter';
-import Dashboard from './Components/Dashboard';
 import Footer from './Components/Footer';
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./Routes";
 
 function App() {
   const [allBusinesses, setAllBusinesses] = useState([]);
@@ -17,55 +16,23 @@ function App() {
       .then((data) => {
         setAllBusinesses(data);
         setFilteredBusinesses(data);
-      })
+      });
   }, []);
 
   return (
-    <div className="App">
-      <Header />
+    <BrowserRouter>
+        <Header />
 
-      <div className="app mt-5">
-        <div className="row">
-          <div className="col-md-6">
-            <h2 className="why fw-bold mb-3">Why Choose Jirani?</h2>
-            <p className="lead">
-              Jirani helps local entrepreneurs connect with their communities and
-              grow their businesses online. Our platform gives your shop more
-              visibility, helps you attract nearby customers, and supports local
-              trade through technology. Join hundreds of small business owners
-              who are already part of the Jirani family today!
-            </p>
-          </div>
+        <AppRoutes
+          allBusinesses={allBusinesses}
+          setAllBusinesses={setAllBusinesses}
+          filteredBusinesses={filteredBusinesses}
+          setFilteredBusinesses={setFilteredBusinesses}
+        />
 
-          <div className="col-md-4">
-            <div className="card shadow p-4">
-              <RegistrationForm />
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <Filter
-            allBusinesses={allBusinesses}
-            setFilteredBusinesses={setFilteredBusinesses}
-          />
-        </div>
-
-        <div className="mt-5">
-          <Dashboard
-            businesses={filteredBusinesses}
-            allBusinesses={allBusinesses}
-            filteredBusinesses={filteredBusinesses}
-            setAllBusinesses={setAllBusinesses}
-            setFilteredBusinesses={setFilteredBusinesses}
-          />
-        </div>
-      </div>
-
-      <Footer />
-    </div>
+        <Footer />
+    </BrowserRouter>
   );
 }
 
 export default App;
-
